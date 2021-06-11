@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #whole{
+          margin: 0 auto;  
+          width:1550px;
+        }
+        .bg{
+            width:1500px;
+            display:flex;
+            background-color: black;
+            margin: left 10px;
+        }
+        .bg>div{
+            width:112px;
+            height:80px;
+            line-height:80px;
+            float:left;
+            margin: 0 auto;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            padding: -10px;
+            text-align: center;
+            justify-content: space-around;
+            display: flex;
+        }
+        a{
+            text-decoration: none;
+        }
+        a:link{
+            color:white;
+        }
+        a:hover{
+            color:orange;
+        }
+        .search{
+            width:113px;
+            height:20px;
+            margin-top: 30px;
+        }
+        .wenzi{
+            color: black;
+            font-size:15px;
+        }
+        .bd>div>a{
+            float:left;
+        }
+        .one,.two,.three,.four{
+            background:url(./images/2.png);
+            width:28px;
+            height:28px;
+            margin-top:27px;
+            background-position:-225px -20px;
+            margin-right:-35px;
+        }
+        .fourfour{
+            margin-left:-40px;
+        }
+        .kuwoimg{
+            margin-top:5px;
+            margin-left:25px;
+        }
+        .wholemiddle{
+            width:1350px;
+            height:800px;
+            margin-left: 200px;
+
+        }
+        .middle{
+            display: flex;
+        }
+        .bg2{
+            width:650px;
+            height:800px;
+            border:red 1px none;
+        }
+        .bg3{
+            width:650px;
+            height:800px;
+            border:red 1px none;
+            }
+        .xiyy{
+            text-align: center;
+            margin-top: 70px;       
+        }
+        .bg2-1,.bg2-2{
+            display: flex;
+            margin-left: 130px;
+        }
+        .bg2-3{
+            text-align: center;
+        }
+        .orange{
+            color:orange;
+        }
+        .bg2-1-1{
+            width:20px;
+            height:20px;
+            margin-top: 20px;
+        }
+        #yuan{
+            width:185px;
+            height:183px;
+            background:url(./images/1.jpg);
+            border-radius:50%;   
+            animation-name: animation;
+            animation-iteration-count: infinite;
+            animation-duration:3s;
+            margin-left:200px;
+            margin-top: 110px;
+        }
+        @keyframes animation{
+            0%{
+                transform:rotate(0deg);
+            }
+            25%{
+                transform:rotate(90deg);
+            }
+            50%{
+                transform:rotate(180deg);
+            }
+            75%{
+                transform:rotate(270deg);
+            }
+            100%{
+                transform:rotate(360deg);
+            }
+        }
+        @keyframes animation1{
+            0%{
+                transform:rotate(0deg); 
+            }
+            100%{
+                transform:rotate(0deg);
+            }
+        }
+        #player{
+            margin-left:120px;
+            width:45px;
+            height:45px;
+            background:url(./images/3.jpg) -1485px 0px;
+        }   
+        .bg3-2{
+            margin-top:40px;
+            display:flex;
+        }
+        .playerMid #prograssBar {
+	        position: relative;
+	        width: 250px;
+	        height: 4px;
+            margin-left:10px;
+            margin-top:18px;
+            background-color: gray;
+        }
+         .prograssBar {
+            width:1px;
+	        height: 4px;
+            margin-left:-30px;
+	        background: #ffcd2d;
+        }
+
+        .playerMid #wp_bufBar {
+            margin-left:30px;
+	        width: 250px;
+	        height: 4px;
+            color:grey;
+        }
+
+        .playerMid #wp_processBtn {
+	        width: 10px;
+	        height: 10px;
+	        background: url(./images/3.jpg) -23px 0px;
+	        position: absolute;
+	        top: -3px;
+        }
+        .playerRight {
+	        width: 40px;
+	        height: 20px;
+            margin-left: 20px;
+        }
+
+        #wp_playTime {
+	        font-size: 12px;
+	        color: grey;
+        }
+        .voice{
+            width:20px;
+            height:20px;
+            background: url(./images/3.jpg) -45px 0px; 
+            margin-top: 10px;
+        }
+        .bg3-3{
+            margin-top:50px;
+            margin-left: 200px;
+            margin-bottom:10px;
+            padding-bottom: 20px;
+        }
+        .bg3-3-1{
+            display: flex;
+            width:207px;
+            height:48px;
+            background:url(./images/3.jpg) 0px -40px;
+           
+        }
+        .bg3-3-2{
+            width:18px;
+            height:18px;
+            background:url(./images/3.jpg) 0px 0px;
+            margin-left: 30px;
+            margin-top: 20px;
+        }
+        .bg3-4{
+            display: flex;
+            margin-left: 100px;
+            margin-top:70px;
+        }
+        .bg3-4-1{
+            display: flex;
+        }
+        .gif{
+            margin-left: 35px;
+            margin-top:-32px;
+            width:20px;
+            height:20px;
+        }
+        .guoziyi{
+            width:70px;
+            height:70px;
+            border-radius:50%;   
+
+        }
+        .show{
+            width:300px;
+            height:70px;
+        }
+        .buttom{
+          border:red 1px none;
+          width:1000px;
+          height:900px;
+          margin-top: 50px;
+          margin-left: 300px;
+        }
+        .buttom-1{
+            display: flex;
+        }
+        .buttom-1-1{
+            width:60px;
+            height:60px;
+            margin-top: 20px;
+
+            margin-left: 20px;
+        }
+        .pinglunkuang{
+            width:900px;
+            height:200px;
+            border: grey 1px solid;
+            margin-top: 0px;
+            margin-left: 20px;
+        }
+        .buttom-2{
+            display: flex;
+        }
+        .buttom2-1{
+            width:20px;
+            height:20px;
+            margin-top: 20px;
+            margin-left:100px;
+        }
+        .buttom-2-2{
+            margin-top: 18px;
+            margin-left: 670px;  
+        }   
+        .qu:link{color:blueviolet;}        
+        .pinglunbtn{
+            background: orange;
+            color:white;
+            width:90px;
+            height:35px;
+            border:none;
+            border-radius:5%; 
+            margin-top: 10px;
+            margin-left: 30px;  
+        }
+        .buttom-3,.buttom-4,.buttom-5{
+            display: flex;
+            height:140px;
+        }
+        .div1,.div2,.div3{
+            display: flex;
+            margin-left: 10px;
+
+        }
+        .div1,.div3{
+            height:40px;
+        }
+        .div3{
+            margin-left: 20px;
+        }
+        .yonghu{
+            width:120px;
+            color:orange;
+            font-size:18px;
+            margin-left: 0px;
+        }
+        .fenxiang{
+            margin-left: 740px;
+        }
+        .shanchu{
+            margin-left:600px;
+        }
+        .zan{
+            height:20px;
+            width:20px;
+            margin-top: 15px;
+            margin-left:10px;
+
+        }
+        .huifu{
+            margin-left: 20px;
+        }
+        .buttom-6{
+            display: flex;
+            margin-left: 310px;
+            margin-top: 28px;
+
+        }
+        .buttom-6>div{
+            width:30px;
+            height:30px;
+            border-radius:50%;   
+            background-color:lightgrey;
+            text-align: center;
+            margin-left: 12px;
+        }
+        #page1{
+            background: orange;
+            color:white;
+        }
+        .shengluehao{
+            margin-top: -2px;
+        }
+        #pinglun1,#pinglun2,#pinglun3{
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="whole">
+    <audio autoplay="autoplay" id="mymusic">
+        <source src="./images/别看我只是一只羊.mp3" type="audio/mp3"></source></audio>
+    <div class="bg">
+
+       <div><img src="./images/kuwoyinyue.jpg" class="kuwoimg"/></div>
+       <div><a href="#">首页</a></div>
+       <div><a href="#">榜单</a></div>
+       <div><a href="#">歌手</a></div>
+       <div><a href="#">下载酷我客户端</a></div>
+       <div><div class="one"></div><a href="#">美女秀</a></div>
+       <div><div class="two"></div><a href="#">酷我耳机</a></div>
+       <div><div class="three"></div><a href="#">VIP会员</a></div>
+       <div><div class="four"></div><a href="#" class="fourfour">i听</a></div>
+       <div><a href="#">更多服务</a></div>
+       <div><a href="#">登录&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^</a></div>
+       <div style="position:relative;">
+           <img src="./images/search.png" class="search"/>
+           <div class="wenzi"style="position:absolute; z-index:2; left:10px; top:-1px">找到好音乐</div>
+
+       </div>
+
+    </div>
+    <div class="wholemiddle">
+    <div class="middle">
+
+       <div class="bg2">
+           <div class="xiyy"><h2>喜羊羊</h2></div>
+           <div class="bg2-1">           <p>专辑：</p><p class="orange">儿歌大全&nbsp;&nbsp;&nbsp;&nbsp;</p><p>歌手：</p><p class="orange">华语群星&nbsp;&nbsp;&nbsp;</p><p>分享&nbsp;&nbsp;&nbsp;</p>
+           <img class="bg2-1-1" src="./images/gecipart.jpg"/>&nbsp;&nbsp;&nbsp;
+           <p class="orange">评论</p>
+           </div>
+           <div class="bg2-2">
+               <p>上传时间:2015-10-02歌曲来源:民大相思湖网球社</p>
+           </div>
+           <hr style="margin:0px;height:1px;color:#AAAAAA;"/>
+           <div class="bg2-3">
+               <p>白云因为我变得柔软</p>
+               <p>别看我只是一只羊</p>
+               <p>羊儿的聪明难以想象</p>
+               <p>天再高心情一样奔放</p>
+               <p>每天都追赶太阳</p>
+               <p class="orange">有什么难题&nbsp;去牵绊我&nbsp;都不会去心伤</p>
+               <p>有什么危险&nbsp;在我面前&nbsp;也不会去慌乱</p>
+               <p>就算有狼群&nbsp;把我追捕&nbsp;也当作游戏一场</p>
+               <p>在什么时间&nbsp;都爱开心&nbsp;笑容都会飞翔</p>
+               <p>就算会摔倒&nbsp;站了起来&nbsp;永远不会沮丧</p>
+               <p>在所有天气&nbsp;拥有叫人&nbsp;大笑的力量</p>
+               <p>虽然我只是羊</p>
+               <p>虽然我只是羊</p>
+               <p>喜羊羊&nbsp;美羊羊&nbsp;懒羊羊&nbsp;沸羊羊</p>
+               <p>慢羊羊&nbsp;软绵绵&nbsp;红太狼&nbsp;灰太狼</p>
+           </div>
+       </div>
+
+       <div class="bg3"> 
+         <div id="yuan"><img id="xuanzhuan"/></div>
+         <div class="bg3-2">
+            <div id="player"></div>
+
+            <div class="playerMid">
+              <div id="prograssBar">
+                <div id="wp_bufBar">
+                  <div class="prograssBar" id="wp_processBar"></div>
+                  <a href="#" class="schedule_btn" id="wp_processBtn" style="left: 0;"></a>             
+                </div>
+              </div>
+            </div>
+
+            <div class="playerRight">
+                <p id="wp_playTime" class="opacity">00.00</p>
+            </div>
+            <div class="voice" id="laba"></div>
+         </div>
+
+         <div class="bg3-3">
+            <div style="position:relative;" class="bg3-3-1">
+            <div class="bg3-3-2"></div>
+            <div class="wenzi"style="position:absolute; z-index:2; left:55px; top:17px">免费下载这首歌</div>
+            </div>
+         </div> 
+         <div class="bg3-4">
+             <div class="pinglun1"><img src="./images/郭子仪.jpg" class="guoziyi"/></div>
+             <div style="position:relative;">
+                <img src="./images/showAdBg.jpg" class="show"/>
+
+                <div style="position:absolute; z-index:2; left:30px; top:10px;color:grey">郭子仪——H5班</div>
+                <div style="position:relative;" class="bg3-4-1">
+                <img src="./images/gif.gif" class="gif"/>
+                <div style="position:absolute; z-index:2; left:58px; top:-30px;color:black">喜羊羊与灰太狼</div>
+                <div class="wenzi3"style="position:absolute; z-index:2; left:230px; top:-30px;color:porple"><a href="#" class="qu">去现场></a></div>
+                </div>
+            </div>
+         </div>    
+
+       </div>
+    </div>
+    </div>
+    <div class="buttom">
+        <p>评论&nbsp;1703条评论</p>
+        <hr style="margin:0px;height:1px;color:#AAAAAA;"/>
+        <div class="buttom-1">
+        <div><img src="./images/郭子仪.jpg" class="buttom-1-1"/></div>
+        <textarea class="pinglunkuang" placeholder="分享你的音乐见解" id="pinglunkuang"></textarea>
+        <p id="time"></p>
+        </div>
+        <div class="buttom-2">
+            <img src="./images/smile.png" class="buttom2-1"/>
+            <span id="">
+            <p class="buttom-2-2">已输入0个字</p>
+            </span>
+        <button class="pinglunbtn" id="pinglunbtn">评论</button>
+        </div>
+
+        <p>精彩评论</p>
+        <hr style="margin:0px;height:1px;color:#AAAAAA;"/>
+
+        <div class="buttom-3">
+            <img src="./images/郭子仪.jpg" class="buttom-1-1"/>
+            <div>
+              <div class="div1">        
+                <p class="yonghu">郭子仪</p>
+                <p class="fenxiang">分享</p>
+              </div>
+              <div class="div2">
+                <p id="pinglun1"></p>
+            </div>
+            <div class="div3">
+                <p id="pinglun1time"></p>
+                <p class="shanchu">删除&nbsp;163&nbsp;</p>
+                <img src="./images/zan.jpg" class="zan"/>
+                <p class="huifu">回复</p>
+            </div>
+            </div>
+        </div>
+        <hr style="margin:0px;height:1px;color:#AAAAAA;"/>
+        <div class="buttom-4">
+            <img src="./images/k.jpg" class="buttom-1-1"/>
+            <div>
+              <div class="div1">        
+                <p class="yonghu">Forget</p>
+                <p class="fenxiang">分享</p>
+              </div>
+              <div class="div2">
+                <p id="pinglun2"></p>
+            </div>
+            <div class="div3">
+                <p id="pinglun2time"></p>
+                <p class="shanchu">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;149&nbsp;</p>
+                <img src="./images/zan.jpg" class="zan"/>
+                <p class="huifu">回复</p>
+            </div>
+            </div>
+        </div>
+        <hr style="margin:0px;height:1px;color:#AAAAAA;"/>
+        <div class="buttom-5">
+            <img src="./images/k.jpg" class="buttom-1-1"/>
+            <div>
+              <div class="div1">        
+                <p class="yonghu">亚里士多德</p>
+                <p class="fenxiang">分享</p>
+              </div>
+              <div class="div2">
+                <p id="pinglun3"></p>
+            </div>
+            <div class="div3">
+                <p id="pinglun3time"></p>
+                <p class="shanchu">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;106&nbsp;</p>
+                <img src="./images/zan.jpg" class="zan"/>
+                <p class="huifu">回复</p>
+            </div>
+            </div>
+        </div>
+        <hr style="margin:0px;height:1px;color:#AAAAAA;"/>
+        <div class="buttom-6">
+            <div><</div>
+            <div id="page1">1</div>
+            <div>2</div>
+            <div>3</div>
+            <p class="shengluehao">…</p>
+            <div>17</div>
+            <div>></div>
+        </div>
+
+    </div>
+    </div>
+    </div>
+</body>
+<script>
+     var yuan=document.getElementById("yuan");
+     var mymusic=document.getElementById("mymusic");
+     var player=document.getElementById("player");
+     var laba=document.getElementById("laba");
+     var wp_processBar=document.getElementById("wp_processBar");
+     var wp_processBtn=document.getElementById("wp_processBtn");
+     var pinglunbtn=document.getElementById("pinglunbtn");
+     var pinglunkuang=document.getElementById("pinglunkuang");
+     var time=document.getElementById("time");
+     var pinglun1=document.getElementById("pinglun1");
+     var pinglun1time=document.getElementById("pinglun1time");
+     var pinglun2=document.getElementById("pinglun2");
+     var pinglun2time=document.getElementById("pinglun2time");
+     var pinglun3=document.getElementById("pinglun3");
+     var pinglun3time=document.getElementById("pinglun3time");
+     var yuan=document.getElementById("yuan");
+     var span=document.getElementsByTagName('span')[0];
+    
+    span.addEventListener("dragover",function(e){
+      e.preventDefault();
+    })
+     document.ondrop=function(e){
+        e.preventDefault();
+    }
+    pinglunbtn.onclick=function(){    
+        var noteList = JSON.stringify(noteList);
+        var noteList = localStorage['noteList'];
+        var date=new Date();   
+	    var year=date.getFullYear();  
+		var month=date.getMonth()+1; 
+		var dat=date.getDate(); 
+		var hour=date.getHours();
+		var minutes=date.getMinutes();   
+        var seconds=date.getSeconds();   
+
+		var time=year+"-"+month+"-"+dat+'  '+hour+':'+minutes+':'+seconds;
+		if(noteList == null || noteList == "") {
+				noteList = '[]';
+		}
+        noteList = JSON.parse(noteList);
+		var objstr={
+               评论:pinglunkuang.value,
+               时间:time           
+        }
+			noteList.push(objstr);
+			noteList = JSON.stringify(noteList);
+			localStorage["noteList"] = noteList;     
+            getNotes();    
+        }   
+    function getNotes() {
+			var noteList = localStorage['noteList'];
+			noteList = JSON.parse(noteList);
+			var i = noteList.length-1;
+            pinglun1.innerHTML= noteList[i]['评论'];
+            pinglun1time.innerHTML= noteList[i]['时间'];
+            pinglun2.innerHTML= noteList[i-1]['评论'];
+            pinglun2time.innerHTML= noteList[i-1]['时间'];
+            pinglun3.innerHTML= noteList[i-2]['评论'];
+            pinglun3time.innerHTML= noteList[i-2]['时间'];
+
+    }
+    window.onload = function() {
+			getNotes();
+            yuan.style.animationName="animation1";
+
+		}
+     player.onclick=function(){
+      if(mymusic.paused==true){
+       mymusic.play();
+       player.style.backgroundPosition="-1582px 0px";
+       move();
+       yuan.style.animationName="animation";
+
+     }
+      else{
+      mymusic.pause();
+      player.style.backgroundPosition="-1485px 0px";
+      yuan.style.animationName="animation1";
+
+    }
+    } 
+    function move(){
+            var width = 10;
+            var temp = setInterval(go, 1000);   
+            function go(){
+                if(width >= 250){
+                    clearInterval(temp);
+                  }     
+                else{   
+                    wp_processBar.style.width = (mymusic.currentTime/ mymusic.duration)*251+'px';   
+                    wp_processBtn.style="left:"+(mymusic.currentTime/ mymusic.duration)*100+"%";  
+                    var time=mymusic.currentTime;
+                    var minute=parseInt(time/60);
+                    var second=time%60;
+                    minute=minute>=10?minute:("0"+minute);
+                    second=second>=10?parseInt(second):("0"+parseInt(second));
+                    wp_playTime.innerHTML=minute+":"+second;     
+                }
+            }
+        }
+    laba.onclick=function(){
+      if(mymusic.muted!=true){
+       mymusic.muted=true;
+     }
+      else{
+        mymusic.muted=null;
+     }
+    }
+</script>
+</html>
